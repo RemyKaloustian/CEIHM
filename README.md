@@ -2,7 +2,7 @@
 
 Team :
 
-Olivier GIROUD
+Anthonny GIROUD
 Thomas MONZEIN
 Kevin DUGLUÉ
 Rémy KALOUSTIAN
