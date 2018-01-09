@@ -28,7 +28,7 @@ h5
     font-family: AleoReg;
 }
 
-#address-popup
+.popup
 {
     position: absolute; 
     top: 0px;
