@@ -4,12 +4,18 @@ $(document).ready(function()
     _address.fullName = "23 rue de la destruction des tétons";
     $("#address-popup h4").text(_address.fullName);
 
+    let _currentFires = [];
+    _currentFires.push("34 rue la Fickenaisse");
+    _currentFires.push("897 chemin Kawaï");
+
+
     let _fireHydrants = [];
     _fireHydrants.push("3 rue du charisme");
     _fireHydrants.push("45 boulevard du communisme");
     _fireHydrants.push("7272 allée des Quicksopes");
 
     showFireHydrants();
+    showCurrentFires();
 
     $("#validate-address").click(validateAddress);
     $("#new-address").click(showNewAddress);
@@ -21,7 +27,14 @@ $(document).ready(function()
         for(var i = 0; i<_fireHydrants.length ; ++i)
         {
             $("#fire-hydrants").append("<p>" + _fireHydrants[i] +"</p>");
+        }
+    }
 
+    function showCurrentFires()
+    {
+        for(var i = 0; i<_currentFires.length ; ++i)
+        {
+            $("#current-fires").append("<br><a href=\"javascript:void(0)\">" + _currentFires[i] +"</a>");
         }
     }
 
