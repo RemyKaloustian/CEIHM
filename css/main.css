@@ -1,0 +1,24 @@
+
+body
+{
+    color: blueviolet; 
+}
+
+#address-popup
+{
+    position: absolute; 
+    top: 0px;
+    left: 0px; 
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(176, 190, 197, 0.5);
+}
+
+.popup-content
+{
+    display: table;
+    margin:auto;
+    background-color: #ECEFF1;
+    
+}
