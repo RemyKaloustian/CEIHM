@@ -10,7 +10,7 @@ $(document).ready(function()
     function validateAddress()
     {
         $("#address-popup").hide();
-        //TODO : Make stylish animations
+        //TODO : Make stylish animations & data check
     }
 
     function showNewAddress()
