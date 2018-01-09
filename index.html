@@ -5,6 +5,8 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Fire Visualizer</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+    
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
     <style>
@@ -33,15 +35,17 @@
 
     <div id="address-popup">
         <div class="popup-content">
-            <h4>Adresse de l'incendie </h4>
             <div>
-                <h5>Bouches d'incendie</h5>
-                <p>4 rue du charisme</p>
-                <p>28 boulevard du communisme</p>
+                <h4>Adresse de l'incendie </h4>
+                <div>
+                    <h5>Bouches d'incendie :</h5>
+                    <p>4 rue du charisme</p>
+                    <p>28 boulevard du communisme</p>
+                </div>
             </div>
-            <div>
-                <a href="">Valider</a>
-                <a href="">Nouvelle adresse</a>            
+            <div class="columns address-buttons">
+                <a href="javascript:void(0)" class="popup-button column">Valider</a>
+                <a href="javascript:void(0)" class="popup-button column">Nouvelle adresse</a>            
             </div>
         </div>
     </div>
