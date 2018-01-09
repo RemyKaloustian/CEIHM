@@ -92,7 +92,7 @@ input
     position: absolute;
     top:40%;
     right: 5px;
-    z-index: 100;
+    z-index: 50;
     color: white;
     border-radius: 1000px;
     height:80px;
@@ -100,6 +100,13 @@ input
     text-align: center;
     background-image: url(../assets/pics/info.png);
     background-repeat: no-repeat;
+}
 
+#side-display
+{
+    position: absolute;
+    z-index: 51;
+    top:0px;
+    background-color: #FAFAFA ;
 }
 
