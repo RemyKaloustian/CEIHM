@@ -83,7 +83,23 @@ input
 
 .popup-button:active
 {
-    background-color: #00E5FF;
-    
+    background-color: #00E5FF;    
+}
+
+
+#side-button
+{
+    position: absolute;
+    top:40%;
+    right: 5px;
+    z-index: 100;
+    color: white;
+    border-radius: 1000px;
+    height:80px;
+    width:80px;
+    text-align: center;
+    background-image: url(../assets/pics/info.png);
+    background-repeat: no-repeat;
+
 }
 
