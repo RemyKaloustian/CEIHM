@@ -1,7 +1,10 @@
 $(document).ready(function()
 {
+    let address = {};
+    address.fullName = "23 rue de la destruction des tétons";
+    $("#address-popup h4").text(address.fullName);
 
-    console.log("Address done");
+
 
     $("#validate-address").click(validateAddress);
     $("#new-address").click(showNewAddress);
