@@ -1,7 +1,31 @@
+@font-face {
+    font-family: "AleoBold";
+    src: url("../assets/fonts/Aleo-Bold.otf");
+}
+@font-face {
+    font-family: "AleoReg";
+    src: url("../assets/fonts/Aleo-Regular.otf");
+}
+
+@font-face {
+font-family: "AleoLight";
+src: url("../assets/fonts/Aleo-Light.otf");
+}
 
 body
 {
-    color: blueviolet; 
+    color:#455A64   ; 
+    font-family: AleoLight;
+}
+
+h4
+{
+    font-family: AleoBold;
+}
+
+h5
+{
+    font-family: AleoReg;
 }
 
 #address-popup
@@ -15,10 +39,47 @@ body
     background-color: rgba(176, 190, 197, 0.5);
 }
 
+
+
 .popup-content
 {
     display: table;
-    margin:auto;
-    background-color: #ECEFF1;
+    margin:auto;    
+    width:40%;
+    min-width: 300px;
+    padding-top: 2%;
+    background-color: #ECEFF1;    
+}
+
+.popup-content > div:first-child
+{
+    padding-left: 50px;
+    margin-bottom: 5%;
+}
+
+.address-buttons
+{
+   
+    background-color: #304FFE;
+}
+
+.popup-button
+{
+    position: relative;
+    text-align: center;
+    font-family: AleoBold;
+    text-decoration: none;
+    color: white;
+    background-color: #304FFE;    
+
+    -webkit-box-shadow: 0px -12px 56px -14px rgba(112,110,112,1);
+-moz-box-shadow: 0px -12px 56px -14px rgba(112,110,112,1);
+box-shadow: 0px -12px 56px -14px rgba(112,110,112,1);
+}
+
+.popup-button:active
+{
+    background-color: #00E5FF;
     
 }
+
