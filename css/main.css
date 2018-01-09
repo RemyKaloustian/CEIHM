@@ -28,6 +28,11 @@ h5
     font-family: AleoReg;
 }
 
+input 
+{
+    width:90%;
+}
+
 .popup
 {
     position: absolute; 
