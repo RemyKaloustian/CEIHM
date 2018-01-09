@@ -41,6 +41,8 @@ $(document).ready(function()
     {
         $("#address-popup").hide();
         //TODO : Make stylish animations & data check
+
+        //MAP : center on the address (if not already done)
     }
 
     function showNewAddress()
@@ -55,6 +57,8 @@ $(document).ready(function()
     {
         $("#new-address-popup").hide();
         //TODO : center the map on the new address
+
+        //MAP :Remove old pointer, add new pointer to new address & Center on the new address
     }
 
     function cancelNewAddress()
