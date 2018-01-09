@@ -1,10 +1,21 @@
+/*
+*@Purpose : contains the address treatment 
+*@Authors:
+*Thomas Monzein
+*Anthonny Giroud
+*Kevin Duglué
+*Rémy Kaloustian
+*/
+
 $(document).ready(function()
 {
-   
+   //Showing the real address
     $("#address-popup h4").text(_address.fullName);    
+    //Both added in their respective popups
     showFireHydrants();
     showCurrentFires();
 
+    //Binding the clicks
     $("#validate-address").click(validateAddress);
     $("#new-address").click(showNewAddress);
     $("#validate-new-address").click(validateNewAddress);

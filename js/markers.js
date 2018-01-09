@@ -1,3 +1,12 @@
+/*
+*@Purpose : contains the markers of the map (won't need it till the end I think)
+*@Authors:
+*Thomas Monzein
+*Anthonny Giroud
+*Kevin Duglué
+*Rémy Kaloustian
+*/
+
 var locations = [
     {
         lat: 43.227635,

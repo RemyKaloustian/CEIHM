@@ -1,3 +1,12 @@
+/*
+*@Purpose : Initializes the map
+*@Authors:
+*Thomas Monzein
+*Anthonny Giroud
+*Kevin Duglué
+*Rémy Kaloustian
+*/
+
 function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 6,
