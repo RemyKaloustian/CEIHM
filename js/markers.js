@@ -1,43 +1,38 @@
 /*
-*@Purpose : contains the markers of the map (won't need it till the end I think)
-*@Authors:
-*Thomas Monzein
-*Anthonny Giroud
-*Kevin Duglué
-*Rémy Kaloustian
-*/
+ *@Purpose : contains the markers of the map (won't need it till the end I think)
+ *@Authors:
+ *Thomas Monzein
+ *Anthonny Giroud
+ *Kevin Duglué
+ *Rémy Kaloustian
+ */
 
-var locations = [
-    {
-        lat: 43.227635,
-        lng: 2.213749
+let locations = [{
+        icon: 'assets/pics/caserne.ico',
+        pos: {
+            lat: 43.692474,
+            lng: 7.244909
+        }
     },
     {
-        lat: 44.227635,
-        lng: 2.213749
+        icon: 'assets/pics/feu.png',
+        pos: {
+            lat: 43.695691,
+            lng: 7.253187
+        }
     },
     {
-        lat: 45.227635,
-        lng: 2.213749
+        icon: 'assets/pics/eau.png',
+        pos: {
+            lat: 43.693085,
+            lng: 7.249582
+        }
     },
     {
-        lat: 46.227635,
-        lng: 2.213749
-    },
-    {
-        lat: 47.227635,
-        lng: 2.213749
-    },
-    {
-        lat: 48.227635,
-        lng: 2.213749
-    },
-    {
-        lat: 49.227635,
-        lng: 2.213749
-    },
-    {
-        lat: 50.227635,
-        lng: 2.213749
+        icon: 'assets/pics/eau.png',
+        pos: {
+            lat: 43.695272,
+            lng: 7.251878
+        }
     }
 ]

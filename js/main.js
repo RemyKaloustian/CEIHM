@@ -1,33 +1,49 @@
 /*
-*@Purpose : Initializes the map
-*@Authors:
-*Thomas Monzein
-*Anthonny Giroud
-*Kevin Duglué
-*Rémy Kaloustian
-*/
+ *@Purpose : Initializes the map
+ *@Authors:
+ *Thomas Monzein
+ *Anthonny Giroud
+ *Kevin Duglué
+ *Rémy Kaloustian
+ */
 
 function initMap() {
-    var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 6,
+    let map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 16,
         center: {
-            lat: 46.227635, // France center
-            lng: 2.213749
-        }
+            lat: 43.692474,
+            lng: 7.244909
+        },
+        styles: [{
+            featureType: "poi",
+            elementType: "labels",
+            stylers: [{
+                visibility: "off"
+            }]
+        }, {
+            featureType: "transit",
+            elementType: "labels",
+            stylers: [{
+                visibility: "off"
+            }]
+        }]
     });
 
-    // Create an array of alphabetical characters used to label the markers.
-    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let markers = locations.map(function (location, i) {
+        let image = {
+            url: location.icon,
+            scaledSize: new google.maps.Size(40, 40),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(0, 0)
+        };
 
-    var markers = locations.map(function (location, i) {
         return new google.maps.Marker({
-            position: location,
-            label: labels[i % labels.length]
+            position: location.pos,
+            icon: image
         });
     });
 
-    // Add a marker clusterer to manage the markers.
-    var markerCluster = new MarkerClusterer(map, markers, {
+    let markerCluster = new MarkerClusterer(map, markers, {
         imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
     });
 }
