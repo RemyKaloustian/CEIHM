@@ -7,13 +7,12 @@
  *Rémy Kaloustian
  */
 
-var locations = [{
+let locations = [{
         icon: 'assets/pics/caserne.ico',
         pos: {
             lat: 43.692474,
             lng: 7.244909
         }
-
     },
     {
         icon: 'assets/pics/feu.png',
