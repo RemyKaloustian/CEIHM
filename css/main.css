@@ -12,6 +12,11 @@ font-family: "AleoLight";
 src: url("../assets/fonts/Aleo-Light.otf");
 }
 
+@font-face {
+    font-family: "AleoLightItalic";
+    src: url("../assets/fonts/Aleo-LightItalic.otf");
+    }
+    
 body
 {
     color:#455A64   ; 
@@ -117,5 +122,11 @@ input
 #side-display p
 {
     margin-left: 10px;
+}
+
+#comments
+{
+    margin-top: 40px;
+    font-family: AleoLightItalic;
 }
 

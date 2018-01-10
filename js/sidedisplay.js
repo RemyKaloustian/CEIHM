@@ -36,7 +36,7 @@ $(document).ready(function()
        $("#side-display").append("<p>Signalé à "+ _fire._signalTime +"</p>");
        $("#side-display").append("<p>"+ _fire._type +"</p>");
        $("#side-display").append("<p>Caserne : "+ _fire._station +"</p>");
-       $("#side-display").append("<div id=\"comments\"></div><br>");
+       $("#side-display").append("<div id=\"comments\"></div>");
 
         for (let index = 0; index < _fire._comments.length; index++)
         {
