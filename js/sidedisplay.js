@@ -17,7 +17,9 @@ $(document).ready(function()
 
    $("#side-button").click(showSideDisplay);
 
+    setSideDisplay();
     updateSideDisplay();
+
    function showSideDisplay()
    {
        //$("#side-display").css("marginLeft", "400px");
@@ -28,5 +30,18 @@ $(document).ready(function()
        $("#side-display").css("marginLeft", $(window).width() - $("#side-display").width());
    }
 
+   function setSideDisplay()
+   {
+       $("#side-display").append("<p>"+ _fire._signals +" signalements</p>");
+       $("#side-display").append("<p>Signalé à "+ _fire._signalTime +"</p>");
+       $("#side-display").append("<p>"+ _fire._type +"</p>");
+       $("#side-display").append("<p>Caserne : "+ _fire._station +"</p>");
+       $("#side-display").append("<div id=\"comments\"></div><br>");
+
+        for (let index = 0; index < _fire._comments.length; index++)
+        {
+            $("#comments").append("<p>"+_fire._comments[index]+"</p>");             
+        }       
+   }
 
 });
