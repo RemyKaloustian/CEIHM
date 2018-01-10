@@ -9,7 +9,7 @@
 
 $(document).ready(function()
 {
-   //$("#side-button").click(showSideDisplay);
+   $("#side-button").click(showSideDisplay);
 
    function showSideDisplay()
    {

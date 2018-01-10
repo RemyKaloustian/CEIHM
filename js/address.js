@@ -39,10 +39,12 @@ $(document).ready(function()
 
     function validateAddress()
     {
-        $("#address-popup").hide();
+       
         //TODO : Make stylish animations & data check
 
+       
         //MAP : center on the address (if not already done)
+        
     }
 
     function showNewAddress()
@@ -56,6 +58,9 @@ $(document).ready(function()
     function validateNewAddress()
     {
         $("#new-address-popup").hide();
+        $("#address-popup").hide();
+        _address.fullName = $("#new-address-popup input").val();
+        console.log("New address = " + _address.fullName );
         //TODO : center the map on the new address
 
         //MAP :Remove old pointer, add new pointer to new address & Center on the new address

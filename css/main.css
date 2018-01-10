@@ -104,10 +104,18 @@ input
 
 #side-display
 {
+    
     position: absolute;
     z-index: 51;
     top:0px;
+    padding-left: 5px;
     background-color: #FAFAFA ;
     height: 100%;
+    width:20%;
+}
+
+#side-display p
+{
+    margin-left: 10px;
 }
 
