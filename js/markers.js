@@ -8,7 +8,7 @@
  */
 
 var locations = [{
-        icon: 'assets/caserne.ico',
+        icon: 'assets/pics/caserne.ico',
         pos: {
             lat: 43.692474,
             lng: 7.244909
@@ -16,21 +16,21 @@ var locations = [{
 
     },
     {
-        icon: 'assets/feu.png',
+        icon: 'assets/pics/feu.png',
         pos: {
             lat: 43.695691,
             lng: 7.253187
         }
     },
     {
-        icon: 'assets/eau.png',
+        icon: 'assets/pics/eau.png',
         pos: {
             lat: 43.693085,
             lng: 7.249582
         }
     },
     {
-        icon: 'assets/eau.png',
+        icon: 'assets/pics/eau.png',
         pos: {
             lat: 43.695272,
             lng: 7.251878
