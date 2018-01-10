@@ -1,23 +1,34 @@
 function initMap() {
+    var customStyled = [{
+        featureType: "all",
+        elementType: "labels",
+        stylers: [{
+            visibility: "off"
+        }]
+    }];
+
     var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 6,
+        zoom: 16,
         center: {
-            lat: 46.227635, // France center
-            lng: 2.213749
+            lat: 43.692474,
+            lng: 7.244909
         }
     });
 
-    // Create an array of alphabetical characters used to label the markers.
-    var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
     var markers = locations.map(function (location, i) {
+        var image = {
+            url: location.icon,
+            scaledSize: new google.maps.Size(40, 40),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(0, 0)
+        };
+
         return new google.maps.Marker({
-            position: location,
-            label: labels[i % labels.length]
+            position: location.pos,
+            icon: image
         });
     });
 
-    // Add a marker clusterer to manage the markers.
     var markerCluster = new MarkerClusterer(map, markers, {
         imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
     });
