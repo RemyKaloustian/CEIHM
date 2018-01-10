@@ -1,9 +1,19 @@
+/*
+ *@Purpose : contains the markers of the map (won't need it till the end I think)
+ *@Authors:
+ *Thomas Monzein
+ *Anthonny Giroud
+ *Kevin Duglué
+ *Rémy Kaloustian
+ */
+
 var locations = [{
         icon: 'assets/caserne.ico',
         pos: {
             lat: 43.692474,
             lng: 7.244909
         }
+
     },
     {
         icon: 'assets/feu.png',
@@ -22,7 +32,7 @@ var locations = [{
     {
         icon: 'assets/eau.png',
         pos: {
-            lat: 43.695272, 
+            lat: 43.695272,
             lng: 7.251878
         }
     }

@@ -1,3 +1,12 @@
+/*
+*@Purpose : Initializes the map
+*@Authors:
+*Thomas Monzein
+*Anthonny Giroud
+*Kevin Duglué
+*Rémy Kaloustian
+*/
+
 function initMap() {
     var customStyled = [{
         featureType: "all",

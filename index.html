@@ -5,32 +5,77 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <title>Fire Visualizer</title>
-    <style>
-        /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-
-        #map {
-            height: 100%;
-        }
-        /* Optional: Makes the sample page fill the window. */
-
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/map.css">
 </head>
 
 <body>
     <div id="map"></div>
+
+    <div id="address-popup" class="popup">
+        <div class="popup-content">
+            <div>
+                <h4>Adresse de l'incendie </h4>
+                <div id="fire-hydrants">
+                    <h5>Bouches d'incendie :</h5>                   
+                </div>
+            </div>
+            <div class="columns address-buttons">
+                <a href="javascript:void(0)" id="validate-address" class="popup-button column">Valider</a>
+                <a href="javascript:void(0)" id="new-address" class="popup-button column">Nouvelle adresse</a>            
+            </div>
+        </div>
+    </div>
+
+    <div id="new-address-popup" class="popup">
+        <div class="popup-content">
+            <div>
+                <h4>Nouvelle adresse</h4>
+                <input placeholder="Saisir la nouvelle adresse">
+                <div><br>
+                    <h5 id="current-fires">Incendies existants</h5>
+                </div>
+            </div>
+            <div class="columns address-buttons">
+                <a href="javascript:void(0)" id="validate-new-address" class="popup-button column">Valider</a>
+                <a href="javascript:void(0)" id="cancel-new-address" class="popup-button column">Annuler</a>            
+            </div>
+        </div>
+    </div>
+
+    <img id="side-button" src="assets/pics/info.png" height="80" width="80">
+
+    <div id="side-display">
+        <h4>Informations</h4>
+        <p>Adresse 1</p>
+        <p>Adresse 2</p>
+        <p>Nombre de signalements</p>
+        <p>Heure de signalement</p>
+        <p>Type de feu</p>
+        <p>Temps de trajet</p>
+        <p>Caserne affectée</p>
+        Commentaires        
+        <div>
+            ouaiiss
+        </div>
+        
+        
+        
+    </div>
 
     <script src="js/main.js"></script>
     <script src="js/markers.js"></script>
 
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDH1oCkpcZ86W-9y7wyyVqXhuuQnPGj46U&callback=initMap"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+    
+    <script src="js/data.js"></script>    
+    <script src="js/address.js"></script>
+    <script src="js/style.js"></script>
+
 </body>
 
 </html>
