@@ -8,8 +8,14 @@
 */
 
 //Address initialisation, this step is a mock cuz IRL we need to get the address from somewhere
-let _address = {};
-_address.fullName = "23 rue de la destruction des tétons";
+let _fire = {};
+_fire._address = "23 rue de la destruction des tétons";
+_fire._signals = 3;
+_fire._signalTime = "15:16";
+_fire._type = "Feu de maison";
+_fire._drivingTime = "23 minutes";
+_fire._station = "La caserne des BGs";
+_fire._comments = ["Attention au feu", "Le feu ça brûle"];
 
 //Setting the current fires, thios is mocked too, IRL we'd get'em from somewhere else
 let _currentFires = [];
