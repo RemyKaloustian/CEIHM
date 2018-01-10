@@ -7,10 +7,17 @@
 *Rémy Kaloustian
 */
 
+function updateSideDisplay()
+{
+    $("#address").text(_fire._address);
+}
+
 $(document).ready(function()
 {
+
    $("#side-button").click(showSideDisplay);
 
+    updateSideDisplay();
    function showSideDisplay()
    {
        //$("#side-display").css("marginLeft", "400px");
@@ -20,5 +27,6 @@ $(document).ready(function()
        
        $("#side-display").css("marginLeft", $(window).width() - $("#side-display").width());
    }
+
 
 });
