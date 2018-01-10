@@ -10,7 +10,7 @@
 $(document).ready(function()
 {
    //Showing the real address
-    $("#address-popup h4").text(_address.fullName);    
+    $("#address-popup h4").text(_fire._address);    
     //Both added in their respective popups
     showFireHydrants();
     showCurrentFires();
@@ -20,6 +20,10 @@ $(document).ready(function()
     $("#new-address").click(showNewAddress);
     $("#validate-new-address").click(validateNewAddress);
     $("#cancel-new-address").click(cancelNewAddress);
+
+    $(".current-fire").click(function(event){
+        setAddress($(event.target).text());
+    });
 
     function showFireHydrants()
     {
@@ -33,7 +37,7 @@ $(document).ready(function()
     {
         for(var i = 0; i<_currentFires.length ; ++i)
         {
-            $("#current-fires").append("<br><a href=\"javascript:void(0)\">" + _currentFires[i] +"</a>");
+            $("#current-fires").append("<br><a href=\"javascript:void(0)\" class=\"current-fire\"\>" + _currentFires[i] +"</a>");
         }
     }
 
@@ -59,17 +63,28 @@ $(document).ready(function()
     {
         $("#new-address-popup").hide();
         $("#address-popup").hide();
-        _address.fullName = $("#new-address-popup input").val();
-        console.log("New address = " + _address.fullName );
+        _fire._address = $("#new-address-popup input").val();
+        updateSideDisplay();
+
         //TODO : center the map on the new address
 
         //MAP :Remove old pointer, add new pointer to new address & Center on the new address
+        console.log("New address = " + _fire._address );
+        
     }
 
     function cancelNewAddress()
     {
         $("#new-address-popup").hide();
         $("#address-popup").show();
+        
+    }
+
+    function setAddress(newaddress)
+    {
+        console.log("BC:"+$("#new-address-popup input").val());
+        $("#new-address-popup input").val(newaddress);
+        console.log("AC: "+$("#new-address-popup input").val());
         
     }
 });
