@@ -43,7 +43,7 @@ $(document).ready(function()
 
     function validateAddress()
     {
-        $("#address-popup").hide();
+        closePopUpAnimation($("#address-popup"));
         //TODO : Make stylish animations & data check
 
        
@@ -53,7 +53,8 @@ $(document).ready(function()
 
     function showNewAddress()
     {
-        $("#address-popup").hide();
+        //$("#address-popup").hide();
+        closePopUpAnimation($("#address-popup"));
         $("#new-address-popup").show();
 
         //TODO : Make stylish animations
@@ -77,7 +78,6 @@ $(document).ready(function()
     {
         $("#new-address-popup").hide();
         $("#address-popup").show();
-        
     }
 
     function setAddress(newaddress)
@@ -85,6 +85,22 @@ $(document).ready(function()
         console.log("BC:"+$("#new-address-popup input").val());
         $("#new-address-popup input").val(newaddress);
         console.log("AC: "+$("#new-address-popup input").val());
-        
+    }
+
+    function closePopUpAnimation(popup)
+    {
+        popup.animate(
+            {
+                opacity: 0.25,
+                left: "-=2000",
+                
+            }, 500, function() {
+            // Animation complete.
+          });
+    }
+
+    function showPopUpAnimation(popup)
+    {
+
     }
 });
