@@ -16,6 +16,7 @@ $(document).ready(function()
 {
 
    $("#side-button").click(showSideDisplay);
+   $("#close-side-display").click(closeSideDisplay);
 
     setSideDisplay();
     updateSideDisplay();
@@ -42,6 +43,11 @@ $(document).ready(function()
         {
             $("#comments").append("<p>"+_fire._comments[index]+"</p>");             
         }       
+   }
+
+   function closeSideDisplay()
+   {
+       $("#side-display").css("marginLeft", $(window).width());
    }
 
 });

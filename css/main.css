@@ -130,10 +130,9 @@ input
     font-family: AleoLightItalic;
 }
 
-#close-side-panel
+#close-side-display
 {
     position: absolute;
     bottom:5px;
-    left:-50px;
 }
 
