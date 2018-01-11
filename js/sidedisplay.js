@@ -30,7 +30,8 @@ $(document).ready(function()
        
    // $("#side-display").css("marginLeft", $(window).width() - $("#side-display").width());
     $('#side-display').transition({ x: -$("#side-display").width()});
-       const newleft = parseInt($("#side-display").width()).toString();
+    $("#close-side-display").transition({ x: -160, delay: 400});
+    $('#close-side-display').css({ rotate: '-180deg' });
       
    }
 
@@ -50,7 +51,9 @@ $(document).ready(function()
 
    function closeSideDisplay()
    {
-        $('#side-display').transition({ x: $("#side-display").width()});       
+        $('#side-display').transition({ x: $("#side-display").width()}); 
+        //$("#close-side-display").transition({ x: 160});
+              
    }
 
 });
