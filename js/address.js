@@ -53,17 +53,16 @@ $(document).ready(function()
 
     function showNewAddress()
     {
-        //$("#address-popup").hide();
         closePopUpAnimation($("#address-popup"));
-        $("#new-address-popup").show();
+        //$("#new-address-popup").show();
+        showPopUpAnimation($("#new-address-popup"));
 
         //TODO : Make stylish animations
     }
 
     function validateNewAddress()
     {
-        //$("#new-address-popup").hide();
-        //$("#address-popup").hide();
+        
         closePopUpAnimation($("#new-address-popup"));
         _fire._address = $("#new-address-popup input").val();
         updateSideDisplay();
@@ -77,8 +76,10 @@ $(document).ready(function()
 
     function cancelNewAddress()
     {
-        $("#new-address-popup").hide();
-        $("#address-popup").show();
+        //$("#new-address-popup").hide();
+        closePopUpAnimation($("#new-address-popup"));
+        showPopUpAnimation($("#address-popup"));
+        //$("#address-popup").show();
     }
 
     function setAddress(newaddress)
@@ -102,6 +103,13 @@ $(document).ready(function()
 
     function showPopUpAnimation(popup)
     {
-
+        popup.animate(
+            {
+                opacity: 1,
+                left: "+=2000",
+                
+            }, 500, function() {
+            // Animation complete.
+          });
     }
 });
