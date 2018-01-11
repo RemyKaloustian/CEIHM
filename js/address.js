@@ -62,8 +62,9 @@ $(document).ready(function()
 
     function validateNewAddress()
     {
-        $("#new-address-popup").hide();
-        $("#address-popup").hide();
+        //$("#new-address-popup").hide();
+        //$("#address-popup").hide();
+        closePopUpAnimation($("#new-address-popup"));
         _fire._address = $("#new-address-popup input").val();
         updateSideDisplay();
 
