@@ -28,7 +28,10 @@ $(document).ready(function()
        const newmargin = $(window).width() - $("#side-display").width();
        console.log("NEWMARGIN = " + newmargin + $("#side-display").css("margin-left") + $("#side-display").width());
        
-       $("#side-display").css("marginLeft", $(window).width() - $("#side-display").width());
+   // $("#side-display").css("marginLeft", $(window).width() - $("#side-display").width());
+    $('#side-display').transition({ x: -$("#side-display").width()});
+       const newleft = parseInt($("#side-display").width()).toString();
+      
    }
 
    function setSideDisplay()
@@ -47,7 +50,7 @@ $(document).ready(function()
 
    function closeSideDisplay()
    {
-       $("#side-display").css("marginLeft", $(window).width());
+        $('#side-display').transition({ x: $("#side-display").width()});       
    }
 
 });
