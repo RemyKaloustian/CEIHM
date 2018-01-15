@@ -23,15 +23,12 @@ $(document).ready(function()
 
    function showSideDisplay()
    {
-       //$("#side-display").css("marginLeft", "400px");
-
        const newmargin = $(window).width() - $("#side-display").width();
        console.log("NEWMARGIN = " + newmargin + $("#side-display").css("margin-left") + $("#side-display").width());
        
-   // $("#side-display").css("marginLeft", $(window).width() - $("#side-display").width());
-    $('#side-display').transition({ x: -$("#side-display").width()});
-    $("#close-side-display").transition({ x: -160, delay: 400});
-    $('#close-side-display').css({ rotate: '-180deg' });
+        $('#side-display').transition({ x: -$("#side-display").width()});
+        $("#close-side-display").transition({ x: -160, delay: 400});
+        $('#close-side-display').css({ rotate: '-180deg' });
       
    }
 
@@ -51,9 +48,7 @@ $(document).ready(function()
 
    function closeSideDisplay()
    {
-        $('#side-display').transition({ x: $("#side-display").width()}); 
-        //$("#close-side-display").transition({ x: 160});
-              
+        $('#side-display').transition({ x: $("#side-display").width()});               
    }
 
 });

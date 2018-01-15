@@ -24,7 +24,5 @@ _currentFires.push("897 chemin Kawaï");
 
 //Setting the fire hydrants, mocked too
 let _fireHydrants = [];
-_fireHydrants.push("3 rue du charisme");
-_fireHydrants.push("45 boulevard du communisme");
-_fireHydrants.push("7272 allée des Quicksopes");
+
 

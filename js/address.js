@@ -12,7 +12,6 @@ $(document).ready(function()
    //Showing the real address
     $("#address-popup h4").text(_fire._address);    
     //Both added in their respective popups
-    showFireHydrants();
     showCurrentFires();
 
     //Binding the clicks
@@ -25,13 +24,7 @@ $(document).ready(function()
         setAddress($(event.target).text());
     });
 
-    function showFireHydrants()
-    {
-        for(var i = 0; i<_fireHydrants.length ; ++i)
-        {
-            $("#fire-hydrants").append("<p>" + _fireHydrants[i] +"</p>");
-        }
-    }
+    
 
     function showCurrentFires()
     {
