@@ -110,6 +110,6 @@ $(document).ready(function()
     function showNewAddressNotif()
     {
         $("#notif").transition({ scale: 1, delay: 300 });
-        $('#notif').transition({ scale: 0, delay: 1200 });
+        $('#notif').transition({ scale: 0, delay: 1000 });
     }
 });
