@@ -12,16 +12,7 @@ function updateSideDisplay()
     $("#address").text(_fire._address);
 }
 
-$(document).ready(function()
-{
-
-   $("#side-button").click(showSideDisplay);
-   $("#close-side-display").click(closeSideDisplay);
-
-    setSideDisplay();
-    updateSideDisplay();
-
-   function showSideDisplay()
+function showSideDisplay()
    {
        const newmargin = $(window).width() - $("#side-display").width();
        console.log("NEWMARGIN = " + newmargin + $("#side-display").css("margin-left") + $("#side-display").width());
@@ -31,6 +22,17 @@ $(document).ready(function()
         $('#close-side-display').css({ rotate: '-180deg' });
       
    }
+
+$(document).ready(function()
+{
+
+   $("#side-button").click(showSideDisplay);
+   $("#close-side-display").click(closeSideDisplay);
+
+    setSideDisplay();
+    updateSideDisplay();
+
+   
 
    function setSideDisplay()
    {
