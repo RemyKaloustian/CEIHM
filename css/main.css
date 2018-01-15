@@ -137,3 +137,17 @@ input
     left:100px;
 }
 
+#notif
+{    
+    transform: scale(0);
+
+    z-index: 52;
+    left:50%;
+    position: absolute;
+    top:30%;
+    
+    background-color: white;    
+    text-align: center;
+    font-size: 2rem;
+}
+

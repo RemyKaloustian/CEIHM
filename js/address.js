@@ -59,6 +59,7 @@ $(document).ready(function()
         closePopUpAnimation($("#new-address-popup"));
         _fire._address = $("#new-address-popup input").val();
         updateSideDisplay();
+        showNewAddressNotif();
 
         //TODO : center the map on the new address
 
@@ -104,5 +105,11 @@ $(document).ready(function()
             }, 500, function() {
             // Animation complete.
           });
+    }
+
+    function showNewAddressNotif()
+    {
+        $("#notif").transition({ scale: 1, delay: 300 });
+        $('#notif').transition({ scale: 0, delay: 1200 });
     }
 });
