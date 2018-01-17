@@ -26,6 +26,9 @@ $(document).ready(function()
     var autocomplete;
     console.log('coucou');
     initAutocomplete();
+
+    $("#change-address-btn").click(showNewAddress);
+
     
 
     function showCurrentFires()
@@ -58,10 +61,14 @@ $(document).ready(function()
     function validateNewAddress()
     {
         
-        closePopUpAnimation($("#new-address-popup"));
-        _fire._address = $("#new-address-popup input").val();
-        updateSideDisplay();
-
+        if($("#new-address-popup input").val().trim() != "")
+        {
+            closePopUpAnimation($("#new-address-popup"));            
+            _fire._address = $("#new-address-popup input").val();
+            updateSideDisplay();
+            showNewAddressNotif();    
+        }
+       
         //TODO : center the map on the new address
 
         //MAP :Remove old pointer, add new pointer to new address & Center on the new address
@@ -106,6 +113,12 @@ $(document).ready(function()
             }, 500, function() {
             // Animation complete.
           });
+    }
+
+    function showNewAddressNotif()
+    {
+        $("#notif").transition({ scale: 1, delay: 300 });
+        $('#notif').transition({ scale: 0, delay: 1000 });
     }
 
     function initAutocomplete() {

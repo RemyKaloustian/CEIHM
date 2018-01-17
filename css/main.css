@@ -38,6 +38,10 @@ input
     width:90%;
 }
 
+#side-button
+{
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
 .popup
 {
     position: absolute; 
@@ -135,5 +139,44 @@ input
     position: absolute;
     bottom:5px;
     left:100px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: 1000px;
+}
+
+#notif
+{    
+    transform: scale(0);
+    z-index: 52;
+    left:50%;
+    position: absolute;
+    top:30%;    
+    background-color: #304FFE;    
+    text-align: center;
+    font-size: 2rem;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white ;
+}
+
+#change-address-btn
+{
+    position: absolute;
+    z-index: 30;
+    background-color: #304FFE;
+    color: white;
+    left: 2px;
+    top:15%;
+    border:none;
+    font-size: 1.2rem;
+    padding-top: 8px;
+    padding-bottom: 8px;  
+    font-family:  AleoReg; 
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#change-address-btn:active
+{
+    background-color: white;
+    color: #304FFE
 }
 

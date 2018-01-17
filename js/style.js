@@ -18,4 +18,6 @@ $(document).ready(function()
     //Setting the side display properties
     $("#side-display").css("marginLeft", $(window).width());
 
+    //$("#notif").hide();
+
 });
