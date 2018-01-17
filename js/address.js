@@ -58,11 +58,14 @@ $(document).ready(function()
     function validateNewAddress()
     {
         
-        closePopUpAnimation($("#new-address-popup"));
-        _fire._address = $("#new-address-popup input").val();
-        updateSideDisplay();
-        showNewAddressNotif();
-
+        if($("#new-address-popup input").val().trim() != "")
+        {
+            closePopUpAnimation($("#new-address-popup"));            
+            _fire._address = $("#new-address-popup input").val();
+            updateSideDisplay();
+            showNewAddressNotif();    
+        }
+       
         //TODO : center the map on the new address
 
         //MAP :Remove old pointer, add new pointer to new address & Center on the new address
