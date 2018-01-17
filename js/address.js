@@ -24,6 +24,8 @@ $(document).ready(function()
         setAddress($(event.target).text());
     });
 
+    $("#change-address-btn").click(showNewAddress);
+
     
 
     function showCurrentFires()
