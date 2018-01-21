@@ -10,7 +10,7 @@
 $(document).ready(function()
 {
    //Showing the real address
-    $("#address-popup h4").text(_fire._address);    
+    $("#address-title").text(_fire._address);    
     //Both added in their respective popups
     showCurrentFires();
 
