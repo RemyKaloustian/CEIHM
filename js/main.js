@@ -62,4 +62,24 @@ function initMap() {
     let markerCluster = new MarkerClusterer(map, markers, {
         imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
     });
+
+    //Adding the path drawing
+    var flightPlanCoordinates = [
+        {lat: 43.69220, lng: 7.247000},
+        {lat: 43.694, lng: 7.2523},
+        {lat:43.695272, lng:7.251878},
+        {lat: 43.695691,lng: 7.2539}
+      ];
+
+      var flightPath = new google.maps.Polyline({
+        path: flightPlanCoordinates,
+        geodesic: true,
+        strokeColor: '#0050ef',
+        strokeOpacity: 1.0,
+        strokeWeight: 4
+      });
+
+      flightPath.setMap(map);
+
+
 }
