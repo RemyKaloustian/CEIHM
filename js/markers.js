@@ -35,6 +35,15 @@ let locations = [{
         }
     },
     {
+        icon: 'assets/pics/placeholder.png',
+        address: '2 place du gang des grenouilles, 06400 Nice',
+        type: 2, //camion de pompier
+        pos: {
+            lat: 43.69270,
+            lng: 7.247000
+        }
+    },
+    {
         icon: 'assets/pics/eau.png',
         address: '54 boulevard du comment dire, 06400 Nice',
         type: 2, //bouche d'incendie
