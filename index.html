@@ -31,7 +31,7 @@
         <div class="popup-content">
             <div>
                 <h4>Nouvelle adresse</h4>
-                <input placeholder="Saisir la nouvelle adresse">
+                <input id="newAdress" placeholder="Saisir la nouvelle adresse">
                 <div><br>
                     <h5 id="current-fires">Incendies existants</h5>
                 </div>
@@ -55,13 +55,16 @@
         Adresse modifiée  <i class="fa fa-check-circle" aria-hidden="true"></i>
     </div>
 
+    
+
+    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDH1oCkpcZ86W-9y7wyyVqXhuuQnPGj46U&libraries=places&callback=initMap"></script>
+    
    <button id="change-address-btn">Changer adresse</button>
 
     <script src="js/main.js"></script>
     <script src="js/markers.js"></script>
-
-    <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDH1oCkpcZ86W-9y7wyyVqXhuuQnPGj46U&callback=initMap"></script>
+    
     <script src="https://code.jquery.com/jquery-3.1.0.js"> </script>
     <script src="js/jquery.transit.min.js"> </script>
     

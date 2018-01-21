@@ -9,6 +9,8 @@
 
 let locations = [{
         icon: 'assets/pics/caserne.ico',
+        address: '45 rue du tétons, 06400 Nice',
+        type: 0, //caserne
         pos: {
             lat: 43.692474,
             lng: 7.244909
@@ -16,6 +18,8 @@ let locations = [{
     },
     {
         icon: 'assets/pics/feu.png',
+        address: '18 avenue du quickscope, 06400 Nice',
+        type: 1, //feu
         pos: {
             lat: 43.695691,
             lng: 7.253187
@@ -23,6 +27,8 @@ let locations = [{
     },
     {
         icon: 'assets/pics/eau.png',
+        address: '27 rue du charisme, 06400 Nice',
+        type: 2, //bouche d'incendie
         pos: {
             lat: 43.693085,
             lng: 7.249582
@@ -30,6 +36,8 @@ let locations = [{
     },
     {
         icon: 'assets/pics/eau.png',
+        address: '54 boulevard du comment dire, 06400 Nice',
+        type: 2, //bouche d'incendie
         pos: {
             lat: 43.695272,
             lng: 7.251878

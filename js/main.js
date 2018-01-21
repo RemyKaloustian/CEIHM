@@ -37,10 +37,26 @@ function initMap() {
             anchor: new google.maps.Point(0, 0)
         };
 
-        return new google.maps.Marker({
+        let infowindow = new google.maps.InfoWindow({
+            content: location.address
+        });
+  
+        let marker = new google.maps.Marker({
             position: location.pos,
             icon: image
         });
+
+        
+        marker.addListener('click', function() {
+            if(location.type == 1) {
+                showSideDisplay();
+            } else {
+                infowindow.open(map, marker);
+            }
+            
+        });
+        
+        return marker;
     });
 
     let markerCluster = new MarkerClusterer(map, markers, {
