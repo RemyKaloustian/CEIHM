@@ -24,7 +24,6 @@ $(document).ready(function()
         setAddress($(event.target).text());
     });
     var autocomplete;
-    console.log('coucou');
     initAutocomplete();
 
     $("#change-address-btn").click(showNewAddress);
