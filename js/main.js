@@ -10,7 +10,9 @@
 function initMap() {
     let directionsService = new google.maps.DirectionsService;
     let directionsDisplay = new google.maps.DirectionsRenderer;
+    let geocoder = new google.maps.Geocoder();
 
+    // Init map
     let map = new google.maps.Map(document.getElementById('map'), {
         zoom: 16,
         center: {
@@ -33,47 +35,38 @@ function initMap() {
     });
     directionsDisplay.setMap(map);
 
-    let start,end;
+    let start, end;
 
-    let markers = locations.map(function (location, i) {
-        let image = {
-            url: location.icon,
-            scaledSize: new google.maps.Size(40, 40)
-        };
-
+    // Transform locations to markers & Set start/end for route
+    let markers = locations.forEach(location => {
         let infowindow = new google.maps.InfoWindow({
             content: location.address
         });
 
-        let marker = new google.maps.Marker({
-            position: location.pos,
-            icon: image
-        });
-
-        if(location.type == 1) {
-            start = location.address;
-        } else if(location.type == 2) {
-            end = location.address;
+        if (location.address) {
+            geocodeAddress(geocoder, map, location);
+        } else {
+            // bouches d'incendie directement en lat/lng
+            let image = {
+                url: location.icon,
+                scaledSize: new google.maps.Size(40, 40)
+            };
+            marker = new google.maps.Marker({
+                map: map,
+                position: location.pos,
+                icon: image
+            });            
         }
 
-        marker.addListener('click', function () {
-            if (location.type == 2) {
-                showSideDisplay();
-            } else {
-                infowindow.open(map, marker);
-            }
-
-        });
-
-        return marker;
-    });
-
-    let markerCluster = new MarkerClusterer(map, markers, {
-        imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
+        // Add start & end of the route
+        if (location.type == 0) {
+            start = location.address;
+        } else if (location.type == 1) {
+            end = location.address;
+        }
     });
 
     calculateAndDisplayRoute(directionsService, directionsDisplay, start, end);
-
 }
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay, start, end) {
@@ -86,6 +79,32 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay, start, e
             directionsDisplay.setDirections(response);
         } else {
             window.alert('Directions request failed due to ' + status);
+        }
+    });
+}
+
+function geocodeAddress(geocoder, resultsMap, location) {
+    geocoder.geocode({
+        'address': location.address
+    }, function (results, status) {
+        if (status === 'OK') {
+            resultsMap.setCenter(results[0].geometry.location);
+            let image = {
+                url: location.icon,
+                scaledSize: new google.maps.Size(40, 40)
+            };
+            let marker = new google.maps.Marker({
+                map: resultsMap,
+                position: results[0].geometry.location,
+                icon: image
+            });
+
+            // Add click event to fire marker
+            if (location.type == 1) {
+                marker.addListener('click', showSideDisplay);
+            }
+        } else {
+            alert('Geocode was not successful for the following reason: ' + status);
         }
     });
 }
