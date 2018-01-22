@@ -126,9 +126,20 @@ $(document).ready(function()
         // Create the autocomplete object, restricting the search to geographical
         // location types.
         
-        var autocomplete = new google.maps.places.Autocomplete(
-        /** @type {!HTMLInputElement} */(document.getElementById('newAdress')),
-        {types: ['geocode']});
+        var autocomplete = new google.maps.places.Autocomplete((document.getElementById('newAdress')), {types: ['geocode']});
+
+
+        var defaultBounds = new google.maps.LatLngBounds(
+            new google.maps.LatLng(43.687984, 7.242908),
+            new google.maps.LatLng(43.720001, 7.283764));
+
+        var options = {
+            ypes: ['geocode'],
+            bounds: defaultBounds,
+            types: ['establishment']
+        };
+
+        var autocomplete = new google.maps.places.Autocomplete((document.getElementById('newAdress')), options);
         // When the user selects an address from the dropdown, populate the address
         // fields in the form.
         //autocomplete.addListener('place_changed', fillInAddress);
