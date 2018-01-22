@@ -7,10 +7,15 @@
  *Rémy Kaloustian
  */
 
+let directionsService;
+let directionsDisplay;
+let geocoder;
+let start, end;
+
 function initMap() {
-    let directionsService = new google.maps.DirectionsService;
-    let directionsDisplay = new google.maps.DirectionsRenderer;
-    let geocoder = new google.maps.Geocoder();
+    directionsService = new google.maps.DirectionsService;
+    directionsDisplay = new google.maps.DirectionsRenderer;
+    geocoder = new google.maps.Geocoder();
 
     // Init map
     let map = new google.maps.Map(document.getElementById('map'), {
@@ -34,8 +39,6 @@ function initMap() {
         }]
     });
     directionsDisplay.setMap(map);
-
-    let start, end;
 
     // Transform locations to markers & Set start/end for route
     let markers = locations.forEach(location => {
@@ -66,10 +69,10 @@ function initMap() {
         }
     });
 
-    calculateAndDisplayRoute(directionsService, directionsDisplay, start, end);
+    calculateAndDisplayRoute();
 }
 
-function calculateAndDisplayRoute(directionsService, directionsDisplay, start, end) {
+function calculateAndDisplayRoute() {
     directionsService.route({
         origin: start,
         destination: end,

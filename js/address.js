@@ -73,6 +73,8 @@ $(document).ready(function()
         //MAP :Remove old pointer, add new pointer to new address & Center on the new address
         console.log("New address = " + _fire._address );
         
+        end = _fire._address;
+        calculateAndDisplayRoute();
     }
 
     function cancelNewAddress()
