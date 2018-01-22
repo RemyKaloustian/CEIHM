@@ -9,7 +9,7 @@
 
 let locations = [{
         icon: 'assets/pics/caserne.ico',
-        address: '45 rue du tétons, 06400 Nice',
+        address: '4 Boulevard de la Madeleine, 06000 Nice',
         type: 0, //caserne
         pos: {
             lat: 43.692474,
@@ -17,9 +17,18 @@ let locations = [{
         }
     },
     {
+        icon: 'assets/pics/placeholder.png',
+        address: '4 Boulevard de la Madeleine, 06000 Nice',
+        type: 1, //camion de pompier
+        pos: {
+            lat: 43.69220,
+            lng: 7.247000
+        }
+    },
+    {
         icon: 'assets/pics/feu.png',
-        address: '18 avenue du quickscope, 06400 Nice',
-        type: 1, //feu
+        address: '19 Rue Dante, 06000 Nice',
+        type: 2, //feu
         pos: {
             lat: 43.695691,
             lng: 7.253187
@@ -28,25 +37,16 @@ let locations = [{
     {
         icon: 'assets/pics/eau.png',
         address: '27 rue du charisme, 06400 Nice',
-        type: 2, //bouche d'incendie
+        type: 3, //bouche d'incendie
         pos: {
             lat: 43.693085,
             lng: 7.249582
         }
     },
     {
-        icon: 'assets/pics/placeholder.png',
-        address: '2 place du gang des grenouilles, 06400 Nice',
-        type: 2, //camion de pompier
-        pos: {
-            lat: 43.69270,
-            lng: 7.247000
-        }
-    },
-    {
         icon: 'assets/pics/eau.png',
         address: '54 boulevard du comment dire, 06400 Nice',
-        type: 2, //bouche d'incendie
+        type: 3, //bouche d'incendie
         pos: {
             lat: 43.695272,
             lng: 7.251878
