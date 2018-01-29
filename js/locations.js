@@ -26,8 +26,8 @@ let locations = [{
         }
     },
     {
-        icon: 'assets/pics/eau.png',
-        type: 2, //bouche d'incendie
+        icon: 'assets/pics/eau-gris.png',
+        type: 3, //bouche d'incendie fermée
         pos: {
             lat: 43.620643,
             lng: 7.074611

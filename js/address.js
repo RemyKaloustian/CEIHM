@@ -22,6 +22,7 @@ $(document).ready(function()
 
     $(".current-fire").click(function(event){
         setAddress($(event.target).text());
+        validateNewAddress();
     });
     var autocomplete;
     initAutocomplete();
@@ -62,7 +63,7 @@ $(document).ready(function()
         
         if($("#new-address-popup input").val().trim() != "")
         {
-            closePopUpAnimation($("#new-address-popup"));            
+            closePopUpAnimation($("#address-popup"));            
             _fire._address = $("#new-address-popup input").val();
             updateSideDisplay();
             showNewAddressNotif();    
