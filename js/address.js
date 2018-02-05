@@ -19,6 +19,7 @@ $(document).ready(function()
     $("#new-address").click(showNewAddress);
     $("#validate-new-address").click(validateNewAddress);
     $("#cancel-new-address").click(cancelNewAddress);
+    $("#change-address-btn").click(showNewAddress);
 
     $(".current-fire").click(function(event){
         setAddress($(event.target).text());
@@ -27,7 +28,6 @@ $(document).ready(function()
     var autocomplete;
     initAutocomplete();
 
-    $("#change-address-btn").click(showNewAddress);
 
     
 
@@ -65,7 +65,7 @@ $(document).ready(function()
     function validateNewAddress()
     {
         console.log("In validate new address");
-        $('address-popup').hide();
+        $('#address-popup').hide();
         
        if($("#new-address-popup input").val().trim() != "")
         {
