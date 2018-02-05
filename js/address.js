@@ -51,22 +51,26 @@ $(document).ready(function()
 
     function showNewAddress()
     {
-        closePopUpAnimation($("#address-popup"));
+        //closePopUpAnimation($("#address-popup"));
         //$("#new-address-popup").show();
-        showPopUpAnimation($("#new-address-popup"));
+       // showPopUpAnimation($("#new-address-popup"));
+       console.log('showing new address');
+       $('#new-address-popup').show();
+     // $("#new-address-popup").css("marginLeft", "0px");
 
+        
         //TODO : Make stylish animations
     }
 
     function validateNewAddress()
     {
         console.log("In validate new address");
-        //$('#new-address-popup').hide();
+        $('address-popup').hide();
         
        if($("#new-address-popup input").val().trim() != "")
         {
-            //$('#new-address-popup').hide();
-            closePopUpAnimation($("#new-address-popup"));            
+            $('#new-address-popup').hide();
+            //closePopUpAnimation($("#new-address-popup"));            
             _fire._address = $("#new-address-popup input").val();
             updateSideDisplay();
             showNewAddressNotif();    
@@ -83,10 +87,10 @@ $(document).ready(function()
 
     function cancelNewAddress()
     {
-        //$("#new-address-popup").hide();
-        closePopUpAnimation($("#new-address-popup"));
-        showPopUpAnimation($("#address-popup"));
-        //$("#address-popup").show();
+        $("#new-address-popup").hide();
+        //closePopUpAnimation($("#new-address-popup"));
+        //showPopUpAnimation($("#address-popup"));
+        $("#address-popup").show();
     }
 
     function setAddress(newaddress)
