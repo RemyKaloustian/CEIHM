@@ -60,10 +60,13 @@ $(document).ready(function()
 
     function validateNewAddress()
     {
+        console.log("In validate new address");
+        //$('#new-address-popup').hide();
         
-        if($("#new-address-popup input").val().trim() != "")
+       if($("#new-address-popup input").val().trim() != "")
         {
-            closePopUpAnimation($("#address-popup"));            
+            //$('#new-address-popup').hide();
+            closePopUpAnimation($("#new-address-popup"));            
             _fire._address = $("#new-address-popup input").val();
             updateSideDisplay();
             showNewAddressNotif();    
@@ -95,6 +98,7 @@ $(document).ready(function()
 
     function closePopUpAnimation(popup)
     {
+        console.log("In close popupANimation");
         popup.animate(
             {
                 opacity: 0.25,
