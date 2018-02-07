@@ -57,4 +57,36 @@ let locations = [{
             lng: 7.076016
         }
     },
+    {
+        icon: 'assets/pics/eau-gris.png',
+        type: 3, //bouche d'incendie fermée
+        pos: {
+            lat: 43.602413,
+            lng: 7.091471
+        }
+    },
+    {
+        icon: 'assets/pics/eau-gris.png',
+        type: 3, //bouche d'incendie fermée
+        pos: {
+            lat: 43.602778,
+            lng: 7.089132
+        }
+    },
+    {
+        icon: 'assets/pics/eau.png',
+        type: 2, //bouche d'incendie
+        pos: {
+            lat: 43.602576,
+            lng: 7.086922
+        }
+    },
+    {
+        icon: 'assets/pics/eau.png',
+        type: 2, //bouche d'incendie
+        pos: {
+            lat: 43.603275,
+            lng: 7.089518
+        }
+    },
 ]

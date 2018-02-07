@@ -9,7 +9,7 @@
 
 //Address initialisation, this step is a mock cuz IRL we need to get the address from somewhere
 let _fire = {};
-_fire._address = "Avenue Roumanille, ZAC St Philippe II, 06410 Biot";
+_fire._address = "80 Rue Henri Poincarré, ZAC St Philippe II, 06410 Biot";
 _fire._signals = 3;
 _fire._signalTime = "15:16";
 _fire._type = "Feu de maison";
