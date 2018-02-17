@@ -14,12 +14,18 @@ let locations = [{
     },
     {
         icon: 'assets/pics/feu.png',
-        address: '80 Rue Henri Point Carré',
+        address: '80 Rue Henri Point Carré, 06410 Biot',
         type: 1, //feu
+        pos: {
+            lat: 43.618969,
+            lng: 7.075735
+        }
     },
     {
         icon: 'assets/pics/eau.png',
         type: 2, //bouche d'incendie
+        debit: 120,
+        distance : '18 mètres',
         pos: {
             lat: 43.619067,
             lng: 7.074900
@@ -28,6 +34,8 @@ let locations = [{
     {
         icon: 'assets/pics/eau-gris.png',
         type: 3, //bouche d'incendie fermée
+        debit: 60,
+        distance : '18 mètres',
         pos: {
             lat: 43.620643,
             lng: 7.074611
@@ -35,6 +43,8 @@ let locations = [{
     },
     {
         icon: 'assets/pics/eau.png',
+        debit: 60,
+        distance : '18 mètres',
         type: 2, //bouche d'incendie
         pos: {
             lat: 43.618839,
@@ -43,6 +53,8 @@ let locations = [{
     },
     {
         icon: 'assets/pics/eau-gris.png',
+        debit: 120,
+        distance : '18 mètres',
         type: 3, //bouche d'incendie fermée
         pos: {
             lat: 43.619006,
@@ -51,6 +63,8 @@ let locations = [{
     },
     {
         icon: 'assets/pics/eau.png',
+        debit: 120,
+        distance : '18 mètres',
         type: 2, //bouche d'incendie
         pos: {
             lat: 43.618305,
@@ -59,6 +73,8 @@ let locations = [{
     },
     {
         icon: 'assets/pics/eau-gris.png',
+        debit: 60,
+        distance : '18 mètres',
         type: 3, //bouche d'incendie fermée
         pos: {
             lat: 43.602413,
@@ -67,6 +83,8 @@ let locations = [{
     },
     {
         icon: 'assets/pics/eau-gris.png',
+        debit: 60,
+        distance : '18 mètres',
         type: 3, //bouche d'incendie fermée
         pos: {
             lat: 43.602778,
@@ -75,6 +93,8 @@ let locations = [{
     },
     {
         icon: 'assets/pics/eau.png',
+        debit: 120,
+        distance : '18 mètres',
         type: 2, //bouche d'incendie
         pos: {
             lat: 43.602576,
@@ -83,6 +103,8 @@ let locations = [{
     },
     {
         icon: 'assets/pics/eau.png',
+        debit: 60,
+        distance : '18 mètres',
         type: 2, //bouche d'incendie
         pos: {
             lat: 43.603275,

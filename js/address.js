@@ -7,6 +7,7 @@
 *Rémy Kaloustian
 */
 
+let posFire;
 $(document).ready(function()
 {
    //Showing the real address
@@ -25,7 +26,9 @@ $(document).ready(function()
         setAddress($(event.target).text());
         validateNewAddress();
     });
+    
     var autocomplete;
+    
     initAutocomplete();
 
 
@@ -80,9 +83,26 @@ $(document).ready(function()
 
         //MAP :Remove old pointer, add new pointer to new address & Center on the new address
         console.log("New address = " + _fire._address );
-        
         end = _fire._address;
-        calculateAndDisplayRoute();
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({
+            'address': end
+        }, function (results, status) {
+            //calculateAndDisplayRoute();
+            var newfire = {
+                icon: 'assets/pics/feu.png',
+                address: end,
+                type: 1, //feu
+                pos: {
+                    lat: results[0].geometry.location.lat(),
+                    lng: results[0].geometry.location.lng()
+                }
+            };
+            console.log("ok tamere");
+            console.log(end);
+            console.log(newfire);
+            initialisation(newfire);
+        }); 
     }
 
     function cancelNewAddress()
@@ -152,13 +172,13 @@ $(document).ready(function()
         var autocomplete = new google.maps.places.Autocomplete((document.getElementById('newAdress')), options);
         // When the user selects an address from the dropdown, populate the address
         // fields in the form.
-        //autocomplete.addListener('place_changed', fillInAddress);
+        autocomplete.addListener('place_changed', fillInAddress);
     }
 
     function fillInAddress() {
         // Get the place details from the autocomplete object.
         var place = autocomplete.getPlace();
-
+        console.log(place);
         for (var component in componentForm) {
             document.getElementById(component).value = '';
             document.getElementById(component).disabled = false;
